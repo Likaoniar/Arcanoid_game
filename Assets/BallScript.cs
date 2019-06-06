@@ -46,7 +46,15 @@ public class BallScript : MonoBehaviour
             inPlay = false;
         }
     }
+    //niszczenie klocków
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.transform.CompareTag("brick"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
 
 
 }
